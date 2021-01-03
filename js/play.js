@@ -9,7 +9,6 @@ let matrixPlay = [
 
  const toPlay = (e)=>{
 
-  console.log(turn)
   if(turn !== "X"){
     turn = "X" 
   }else{
