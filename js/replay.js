@@ -6,9 +6,8 @@ let position = 0
 function replay(){
 
   const boxes = container.childNodes
-  for(let i = 0; i < boxes.length; i++){
-    boxes[i].innerHTML = "" 
-  }
+  boxes.forEach( elem => elem.innerHTML = "" )
+
   for(let f = 0; f < matrixPlay.length; f++){
     for(let c = 0; c < matrixPlay.length; c++){
       position++
