@@ -3,9 +3,7 @@ import { replay } from "./replay.js"
 import { win } from "./checkWinner.js"
 
 const container = document.getElementById("container")
-container.addEventListener("click", (e)=>{ 
-  if(win === false) toPlay(e)
-  })
+container.addEventListener("click", (e)=>{ if(win === false) toPlay(e) })
 
 //reload the page
 const reload = document.getElementById("reload")

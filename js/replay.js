@@ -11,10 +11,9 @@ function replay(){
   for(let f = 0; f < matrixPlay.length; f++){
     for(let c = 0; c < matrixPlay.length; c++){
       position++
-      matrixPlay[f][c] = position.toString()
+      matrixPlay[f][c] = position
     }
   }
   position = 0
 }
-
 export{ replay }

@@ -6,12 +6,11 @@ let win = false
 
 function alertPlayer(player){
 
-  if(player == "X"){
+  if(player === "X"){
     alert("player 1, you are the WINNER!!")
   }else{
-    if(player == "O") alert("player 2, you are the WINNER!!")
+    if(player === "O") alert("player 2, you are the WINNER!!")
   }
-
 }
 
 function theWinner(){
