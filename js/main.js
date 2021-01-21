@@ -6,9 +6,7 @@ container.addEventListener("click", (e)=>{ toPlay(e)})
 
 //reload the page
 const reload = document.getElementById("reload")
-reload.addEventListener("click", ()=>{
-  location.reload()
-})
+reload.addEventListener("click", ()=>{ location.reload()})
 
 //to play again
 const btn = document.getElementById("reset")
