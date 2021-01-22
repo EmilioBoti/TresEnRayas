@@ -1,6 +1,6 @@
 import { toPlay } from "./play.js"
-import { replay } from "./replay.js"
-import { win } from "./checkWinner.js"
+import { win, replay } from "./checkWinner.js"
+
 
 const container = document.getElementById("container")
 container.addEventListener("click", (e)=>{ if(win === false) toPlay(e) })
@@ -13,4 +13,4 @@ reload.addEventListener("click", ()=>{ location.reload()})
 const btn = document.getElementById("reset")
 btn.addEventListener("click", ()=>{ replay() })
 
-export{ container}
+export{ container, win}

@@ -3,6 +3,7 @@ import { matrixPlay } from "./play.js"
 let player1 = 0
 let player2 = 0
 let win = false
+let position = 0
 
 function alertPlayer(player){
 
@@ -13,25 +14,31 @@ function alertPlayer(player){
   }
 }
 
+//function to replay again
+function replay(){
+  win  = false
+  const boxes = container.childNodes
+  boxes.forEach( elem => elem.innerHTML = "" )
+
+  for(let f = 0; f < matrixPlay.length; f++){
+    for(let c = 0; c < matrixPlay.length; c++){
+      position++
+      matrixPlay[f][c] = position
+    }
+  }
+  position = 0
+}
+
+
+//function to check who wins
 function theWinner(){
 
   let boardPlayer1 = document.getElementById("player1")
   let boardPlayer2 = document.getElementById("player2")
   let sayWinner = ""
 
-  /*for(let f = 0; f < matrixPlay.length; f++){
-      if(matrixPlay[f][0] === matrixPlay[f][1] && matrixPlay[f][0] === matrixPlay[f][2] ){
-        player1++
-        win = matrixPlay[f][0]
-        boardPlayer1.innerHTML = player1
-        console.log(matrixPlay[f][0])
-      }else{
-        player2++
-        win = matrixPlay[f][0]
-        boardPlayer2.innerHTML = player2
-    }
-  }*/
   //line 1
+  
   if((matrixPlay[0][0] === matrixPlay[0][1]) && (matrixPlay[0][0] === matrixPlay[0][2])){
     win = true
     if(matrixPlay[0][0] === "X"){
@@ -138,4 +145,4 @@ function theWinner(){
   } 
   alertPlayer(sayWinner)
 }
-export{ theWinner, win }
+export{ theWinner, win, replay }

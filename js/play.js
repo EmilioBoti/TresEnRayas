@@ -6,7 +6,7 @@ let matrixPlay = [
   [4,5,6],
   [7,8,9]
 ]
-
+  //fuction to change players
   function alreadyPlay(){
     if(turn !== "X") turn = "X" 
       else  turn = "O"
