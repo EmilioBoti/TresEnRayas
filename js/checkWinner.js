@@ -7,16 +7,16 @@ let position = 0
 
 function alertPlayer(player){
 
-  if(player === "X"){
-    alert("player 1, you are the WINNER!!")
-  }else{
-    if(player === "O") alert("player 2, you are the WINNER!!")
-  }
+  if(player === "X") alert("player 1, you are the WINNER!!")
+    else
+      if(player === "O") alert("player 2, you are the WINNER!!")
+
 }
 
 //function to replay again
 function replay(){
   win  = false
+
   const boxes = container.childNodes
   boxes.forEach( elem => elem.innerHTML = "" )
 
