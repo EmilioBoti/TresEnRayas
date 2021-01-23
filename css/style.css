@@ -1,8 +1,8 @@
 .grid-container{
-  width: 50%;
-  margin: 0px auto;
+  width: 98%;
+  margin: auto;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
   justify-content: space-between;
   margin-bottom: 50px;
   padding: 15px;
@@ -12,15 +12,10 @@
 }
 .score{
   width: 100%;
-  padding: 0px;
+  padding: 5px 0px;
   font-size: 20px;
   font-weight: 400;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#vs{
-  font-size: 25x;
-  font-family: 'Sansita Swashed', cursive;
-  color: #BA4A00;
 }
 h1{
   display: none;
@@ -29,18 +24,19 @@ h1{
   width: 98%;
   margin: 0px;
   display: grid;
-  grid-template-columns: 50px 50px 50px;
+  grid-template-columns: 80px 80px 80px;
   justify-content: center;
   align-content: center;
 }
 .items{
-  height: 25px;
-  padding: 10px;
+  height: 80px;
+  padding: 0px;
+  font-size: 80px;
   border: 1px solid #000000;
   border-radius: 1px;
   text-align: center;
   background-color: #F7F9F9;
-  color: #D35400;
+  color: #212F3D;
   cursor: pointer;
 }
 .grid-board{
@@ -53,11 +49,11 @@ h1{
 .board-items{
   padding: 5px 8px;
   margin: 0px 3px;
-  border: 1px solid #ba4a00a9;
+  border: 1px solid #212F3D;
   border-radius: 3px;
-  background-color: #d35400d5;
-  color: #000000;
+  background-color: #212F3D;
   cursor: pointer;
+  color: #F7F9F9;
   transition: 0.8s all;
 }
 .board-items:hover{
