@@ -2,8 +2,8 @@ import { matrixPlay } from "./play.js"
 
 let player1 = 0
 let player2 = 0
-let win = false
 let position = 0
+let win = false
 
 function alertPlayer(player){
 
@@ -18,7 +18,7 @@ function replay(){
   win  = false
 
   const boxes = container.childNodes
-  boxes.forEach( elem => elem.innerHTML = "" )
+  boxes.forEach( elem => elem.innerHTML = "" ) 
 
   for(let f = 0; f < matrixPlay.length; f++){
     for(let c = 0; c < matrixPlay.length; c++){
