@@ -9,13 +9,16 @@
 </head>
 <body>
   <header class="grid-container">
-    <div class="score">First Player:<span id="player1">0</span></div>    
-    <!--<div class="score" id="vs">Vs</div>-->
-    <div class="score">Second Player:<span id="player2">0</span></div>
+    <h1 id="title">Tic Tac Toe</h1>
   </header>
   <main id="main-container">
+      <section class="grid-score">
+        <div class="score">1<sup>st</sup> Player<span id="player1"  >0</span></div>    
+        <div class="score" id="vs">Vs</div>
+        <div class="score"><span id="player2">0</span>2<sup>nd</sup> Player</div>
+      </section>
     <section class="container" id="container">
-      <h1>it is hiden</h1>
+      <h2>it is hiden</h2>
       <div class="items" id="box1" data-position="00"></div>
       <div class="items" id="box2" data-position="01"></div>
       <div class="items" id="box3" data-position="02"></div>
@@ -27,8 +30,8 @@
       <div class="items" id="box9" data-position="22"></div>
     </section>
     <div class="grid-board">
-      <input type="button" class="board-items" value="Play Again" id="reset">
-      <input type="button" class="board-items" value="Reload" id="reload">
+      <input type="button" class="board-items" value="Play Again" id="replay">
+      <input type="button" class="board-items" value="Reset" id="reset">
     </div>
   </main>
 </body>
