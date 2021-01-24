@@ -7,12 +7,11 @@ let win = false
 
 function alertPlayer(player){
 
-  if(player === "X") alert("player 1, you are the WINNER!!")
+  if(player === "X") alert("Player #1, you are the WINNER!!")
     else
-      if(player === "O") alert("player 2, you are the WINNER!!")
+      if(player === "O") alert("Player #2, you are the WINNER!!")
 
 }
-
 //function to replay again
 function replay(){
   win  = false
@@ -28,27 +27,23 @@ function replay(){
   }
   position = 0
 }
-
-
 //function to check who wins
 function theWinner(){
 
-  let boardPlayer1 = document.getElementById("player1")
-  let boardPlayer2 = document.getElementById("player2")
+  const boardPlayer1 = document.getElementById("player1")
+  const boardPlayer2 = document.getElementById("player2")
   let sayWinner = ""
   const size = matrixPlay.length
-  console.log(size)
+  
   for(let f = 0; f < size; f++){
     if((matrixPlay[f][0] === matrixPlay[f][1]) && (matrixPlay[f][1] === matrixPlay[f][2])){
       win = true
       if(matrixPlay[f][0] === "X"){
-          console.log(matrixPlay)
           player1++
           sayWinner = matrixPlay[f][0]
           boardPlayer1.innerHTML = player1
       }else{
         if(matrixPlay[f][0] === "O"){
-          console.log(matrixPlay)
           player2++
           sayWinner = matrixPlay[f][0]
           boardPlayer2.innerHTML = player2
@@ -61,13 +56,11 @@ function theWinner(){
     if((matrixPlay[0][f] === matrixPlay[1][f]) && (matrixPlay[0][f] === matrixPlay[2][f])){
       win = true
       if(matrixPlay[0][f] === "X"){
-          console.log(matrixPlay)
           player1++
           sayWinner = matrixPlay[0][f]
           boardPlayer1.innerHTML = player1
       }else{
         if(matrixPlay[0][f] === "O"){
-          console.log(matrixPlay)
           player2++
           sayWinner = matrixPlay[0][f]
           boardPlayer2.innerHTML = player2
@@ -101,6 +94,6 @@ function theWinner(){
      boardPlayer2.innerHTML = player2
     }
   } 
-  alertPlayer(sayWinner)
+  setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
 }
 export{ theWinner, win, replay }
