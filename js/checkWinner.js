@@ -94,6 +94,6 @@ function theWinner(){
      boardPlayer2.innerHTML = player2
     }
   } 
-  setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+  setTimeout(()=>{alertPlayer(sayWinner)}, 100)
 }
 export{ theWinner, win, replay }
