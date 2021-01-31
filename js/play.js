@@ -3,7 +3,7 @@ import { theWinner } from "./checkWinner.js"
 let turn = "X"
 let matrixPlay = [[1,2,3],[4,5,6],[7,8,9]]
 
-  //fuction to change players
+  //fuction to change players' turn
   function alreadyPlay(boxTarget){
     if(turn !== "X") {
       turn = "X"
@@ -22,7 +22,7 @@ let matrixPlay = [[1,2,3],[4,5,6],[7,8,9]]
     boxTarget.id === "box5" || boxTarget.id === "box6" || boxTarget.id === "box7" || boxTarget.id === "box8" || 
     boxTarget.id === "box9"){
     
-    let x = boxTarget.dataset.position.split("").map((elem)=> Number.parseInt(elem))
+    let x = boxTarget.dataset.position.split("").map((elem)=> Number.parseInt(elem)) //get position of box's clicked
   
     if(matrixPlay[x[0]][x[1]] === 1 || matrixPlay[x[0]][x[1]] === 2 || matrixPlay[x[0]][x[1]] === 3 || matrixPlay[x[0]][x[1]] === 4 ||
       matrixPlay[x[0]][x[1]] === 5 || matrixPlay[x[0]][x[1]] === 6 || matrixPlay[x[0]][x[1]] === 7 ||
