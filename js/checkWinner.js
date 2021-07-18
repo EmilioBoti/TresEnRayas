@@ -10,7 +10,7 @@ function alertPlayer(turn){
   const card = document.getElementById("card")
   card.classList.add("card--show")
 
-  let player
+  let player = turn
 
   if(turn === "X"){
     player = turn
@@ -19,9 +19,10 @@ function alertPlayer(turn){
       player = turn
     } 
   }
+
   const showCard = `
     <div class="popUpWin">
-      <p>${player}, you are the WINNER</p>
+      <p>${player} is the WINNER</p>
     </div>
   `
   card.innerHTML = showCard
@@ -31,7 +32,7 @@ function alertPlayer(turn){
 //function to replay again
 function replay(){
   win  = false
-  
+
   const boxes = container.childNodes
   boxes.forEach( elem => elem.innerHTML = "" ) 
 
@@ -46,9 +47,11 @@ function replay(){
 //function to check who wins
 function theWinner(){
 
+  let sayWinner = "tie"
+  const timer = 1000
   const boardPlayer1 = document.getElementById("player1")
   const boardPlayer2 = document.getElementById("player2")
-  let sayWinner = ""
+  
   const size = matrixPlay.length
 
   //Check lines
@@ -59,14 +62,19 @@ function theWinner(){
           player1++
           sayWinner = matrixPlay[f][0]
           boardPlayer1.innerHTML = player1
-          setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
-
+          setTimeout(()=>{
+            alertPlayer(sayWinner)
+            replay()
+          }, timer)
       }else{
         if(matrixPlay[f][0] === "O"){
           player2++
           sayWinner = matrixPlay[f][0]
           boardPlayer2.innerHTML = player2
-          setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+          setTimeout(()=>{
+            alertPlayer(sayWinner)
+            replay()
+          }, timer)
         }
       }
       return
@@ -80,13 +88,19 @@ function theWinner(){
           player1++
           sayWinner = matrixPlay[0][f]
           boardPlayer1.innerHTML = player1
-          setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+          setTimeout(()=>{
+            alertPlayer(sayWinner)
+            replay()
+          }, timer)
       }else{
         if(matrixPlay[0][f] === "O"){
           player2++
           sayWinner = matrixPlay[0][f]
           boardPlayer2.innerHTML = player2
-          //setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+          setTimeout(()=>{
+            alertPlayer(sayWinner)
+            replay()
+          }, timer)
         }
       }
       return
@@ -99,13 +113,20 @@ function theWinner(){
       player1++
       sayWinner = matrixPlay[0][0]
       boardPlayer1.innerHTML = player1
-      setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+      setTimeout(()=>{
+        alertPlayer(sayWinner)
+        replay()
+      }, timer)
     }else{
       player2++
       sayWinner = matrixPlay[0][0]
       boardPlayer2.innerHTML = player2
-      //setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+      setTimeout(()=>{
+        alertPlayer(sayWinner)
+        replay()
+      }, timer)
     }
+    return
   }
  //Diagonal /
   if( (matrixPlay[2][0] === matrixPlay[1][1]) && (matrixPlay[2][0] === matrixPlay[0][2])){
@@ -114,13 +135,21 @@ function theWinner(){
       player1++
       sayWinner = matrixPlay[2][0]
       boardPlayer1.innerHTML = player1
-      setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+      setTimeout(()=>{
+        alertPlayer(sayWinner)
+        replay()
+      }, timer)
     }else{
       player2++
       sayWinner = matrixPlay[2][0]
       boardPlayer2.innerHTML = player2
-      setTimeout(()=>{alertPlayer(sayWinner)}, 1000)
+      setTimeout(()=>{
+        alertPlayer(sayWinner)
+        replay()
+      }, timer)
     }
+    return
   } 
+  //alertPlayer(sayWinner)
 }
 export{ theWinner, win, replay }

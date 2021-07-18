@@ -1,22 +1,21 @@
 import { theWinner } from "./checkWinner.js"
 
+const matrixPlay = [[1,2,3],[4,5,6],[7,8,9]]
 let turn = "X"
-let matrixPlay = [[1,2,3],[4,5,6],[7,8,9]]
-
   //fuction to change players' turn
-  function alreadyPlay(boxTarget){
-    if(turn !== "X") {
-      turn = "X"
-      boxTarget.style.color = "#1C2833"
-    }else{
-      turn = "O"
-      boxTarget.style.color = "#707B7C"
-    } 
+function alreadyPlay(boxTarget){
+
+  if(turn !== "X") {
+    turn = "X"
+    boxTarget.style.color = "#1C2833"
+  }else{
+    turn = "O"
+    boxTarget.style.color = "#707B7C"
+  } 
 }
 //Play function
  function toPlay(e){
-
-  const boxTarget = e.target 
+  const boxTarget = e.target
 
   if(boxTarget.id === "box1" || boxTarget.id === "box2" || boxTarget.id === "box3" || boxTarget.id === "box4" || 
     boxTarget.id === "box5" || boxTarget.id === "box6" || boxTarget.id === "box7" || boxTarget.id === "box8" || 
