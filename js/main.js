@@ -1,16 +1,12 @@
-import { toPlay } from "./play.js"
-import { win, replay } from "./checkWinner.js"
+import { home } from "./views/home.js"
+import { router } from "./router.js"
 
-//function to play
-const container = document.getElementById("container")
-container.addEventListener("click", (e)=>{ if(win === false) toPlay(e) })
+export const mainContainer = document.getElementById("main-container")
+mainContainer.appendChild(home())
 
-//reload the page
-const reload = document.getElementById("reset")
-reload.addEventListener("click", ()=>{ location.reload()})
+window.addEventListener("hashchange", ()=>{
+    let location = window.location.hash
+    router(location)
+})
 
-//to play again
-const btn = document.getElementById("replay")
-btn.addEventListener("click", ()=>{ replay() })
-
-export{ container, win}
+export{ }
