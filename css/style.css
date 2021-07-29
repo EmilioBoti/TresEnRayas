@@ -76,7 +76,7 @@ body{
   width: 3em; 
   height: 2em;
   border: 0.0em solid;
-  border-radius: 1em;
+  border-radius: 0.5em;
   background-color: #ffffff;
   box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
   color: #000;
@@ -94,7 +94,7 @@ body{
 .pos{
   position: relative;
   top: 0em;
-  left: 15%;
+  left: 17%;
 }
 .board-score{
   display: flex;
