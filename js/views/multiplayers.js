@@ -6,6 +6,7 @@ export function multiplayers(){
 
     const page = `
         <section class="grid-score">
+            <div class="card" id="card"></div> 
             <div class="goBack" id ="goBack">
                 <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group">
