@@ -31,9 +31,9 @@ body{
   color: #ffffff;
 }
 .box-btn{
+  width: max-content;
   position: relative;
   top: 15em;
-  width: max-content;
   display: flex;
 }
 .box-btn :nth-child(1){
@@ -187,7 +187,6 @@ body{
   justify-content: center;
   border: 0.01em solid #239B56;
   border-radius: 0.3em;
-  /* box-shadow: 1px 2px 1px 2px rgb(240, 242, 243); */
   background: rgb(47, 47, 47);
 }
 .card--show{
