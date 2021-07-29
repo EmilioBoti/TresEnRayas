@@ -19,7 +19,6 @@ function alertPlayer(turn){
       player = turn
     } 
   }
-
   const showCard = `
     <div class="popUpWin">
       <p>${player} is the WINNER</p>

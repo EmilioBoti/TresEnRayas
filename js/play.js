@@ -21,7 +21,7 @@ function alreadyPlay(boxTarget){
     boxTarget.id === "box5" || boxTarget.id === "box6" || boxTarget.id === "box7" || boxTarget.id === "box8" || 
     boxTarget.id === "box9"){
     
-    let x = boxTarget.dataset.position.split("").map((elem)=> Number.parseInt(elem)) //get position of box's clicked
+    const x = boxTarget.dataset.position.split("").map((elem)=> Number.parseInt(elem)) //get position of box's clicked
   
     if(matrixPlay[x[0]][x[1]] === 1 || matrixPlay[x[0]][x[1]] === 2 || matrixPlay[x[0]][x[1]] === 3 || matrixPlay[x[0]][x[1]] === 4 ||
       matrixPlay[x[0]][x[1]] === 5 || matrixPlay[x[0]][x[1]] === 6 || matrixPlay[x[0]][x[1]] === 7 ||
