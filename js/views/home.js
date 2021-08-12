@@ -46,8 +46,8 @@ export const home = ()=>{
     boxBtn.appendChild(btn2)
 
     btn2.addEventListener("click", ()=>{
-        window.location.hash = ""
         console.log("Second Button Clicked")
+        alert("Comming Soon!")
     })
 
     return homeP
