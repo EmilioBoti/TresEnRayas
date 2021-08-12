@@ -1,6 +1,6 @@
 export const home = ()=>{
 
-    window.location.hash = "home"
+    window.location.hash = "/home"
     
     const homeP = document.createElement("section")
     homeP.classList.add("home-page")
@@ -35,7 +35,7 @@ export const home = ()=>{
 
     btn1.addEventListener("click", ()=>{
         console.log("Fist Button Clicked")
-        window.location.hash = "multiplayer"
+        window.location.hash = "/multiplayer"
     })
 
     const btn2 = document.createElement("input")

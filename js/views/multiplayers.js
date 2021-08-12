@@ -59,5 +59,5 @@ export function multiplayers(){
     btn.addEventListener("click", ()=>{ replay() })
 
     const goBack = document.getElementById("goBack")
-    goBack.addEventListener("click", ()=>{ window.location.hash = "home"})
+    goBack.addEventListener("click", ()=>{ window.location.hash = "/home"})
 }

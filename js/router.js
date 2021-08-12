@@ -6,13 +6,13 @@ export const router = (page)=>{
 
     mainContainer.innerHTML = ""
     switch(page){
-        case "#home":
+        case "#/home":
             mainContainer.appendChild(home())
             break;
-        case "#multiplayer":
+        case "#/multiplayer":
             multiplayers()
             break;
-        case "#cpu":
+        case "#/cpu":
             console.log(page)
             break;
         default:
