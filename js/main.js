@@ -9,7 +9,4 @@ window.addEventListener("hashchange", ()=>{
     router(location)
 })
 
-const btn = document.getElementById("reset")
-btn.addEventListener("click", ()=>{ replay() })
-
-export{ container }
+export{ }
