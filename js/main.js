@@ -10,7 +10,6 @@ reload.addEventListener("click", ()=>{
   location.reload()
 })
 
-//to play again
 const btn = document.getElementById("reset")
 btn.addEventListener("click", ()=>{ replay() })
 
