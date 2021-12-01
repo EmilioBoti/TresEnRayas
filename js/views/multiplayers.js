@@ -14,20 +14,20 @@ export function multiplayers(){
                     </g>
                 </svg>                        
             </div>
-            <div class="title pos">
-                Tic-Tac-Toe
-            </div>
             <div class="board-score">
-            <div class="board-score-item">
-                <p class="players">Player #1</p> 
-                <div id="player1" class="score btn"><p>0</p></div>
-            </div>    
-            <div class="board-score-item">
-                <p class="players">Player #2</p>
-                <div id="player2"  class="score btn"><p>0</p></div>
-            </div>
+                <div class="board-score-item">
+                    <p class="players">Player #1</p> 
+                    <div id="player1" class="score">0</div>
+                </div>    
+                <div class="board-score-item">
+                    <p class="players">Player #2</p>
+                    <div id="player2"  class="score">0</div>
+                </div>
             </div>
         </section>
+        <div class="title">
+            Tic-Tac-Toe
+        </div>
         <section class="container" id="container">
             <div class="items" id="box1" data-position="00"></div>
             <div class="items" id="box2" data-position="01"></div>
