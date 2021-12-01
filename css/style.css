@@ -11,11 +11,13 @@
   --shadow_box: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
   --shadow_box_hover: 0em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
-body{
+html body{
   /* font-family: "Raleway", sans-serif ; */
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   background-color: var(--bg_green);
+  margin: 0em;
+  height: 100%;
 }
 
 /**********Home Page**********/
@@ -84,12 +86,6 @@ body{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0.5em 1.5em 4em 1.5em;
-  margin: 0em auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: center; */
 }
 .goBack{
   position: relative;
@@ -157,6 +153,7 @@ body{
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
+  top: 50%;
 }
 .items{
   width: 1.24em;
@@ -227,3 +224,17 @@ body{
   visibility: visible;
   transition: .5s ease all;
 }
+
+@media screen and (max-width: 414px) {
+  .goBack{
+    display: none;
+  }
+  .board-score{
+    width: 100%;
+  }
+  .board-score-item{
+    width: 20%;
+  }
+}
+
+
